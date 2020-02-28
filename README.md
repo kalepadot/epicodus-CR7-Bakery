@@ -14,18 +14,19 @@ User should be prompted with a welcome message from the bakery and given the pri
 ![Landing Page Preview]()
 
 ## Project Specifications
-<!-- 
+
 | Behavior | Input | Output |
 |---|:---:|:---:|
-|User inputs the ingredients they have and clicks submit to recieve recipe inspiration|apple, sugar, flour|Apple fritter|
-|User inputs recipe name to recieve recipe instructions|apple fritter|Combine flour, sugar, salt, baking powder, cinnamon. Stir in milk and egg until just combined. Fold in apple...|
-|User clicks on fridge graphic to recieve a food related fact|graphic click|Cherries are in the rose family|
+|User is welcomed to bakery by application|'welcome to the bakery'|
+|User is prompted with prices of bread and pastries|Bread = x$ Pastry = x$|
+|User can input amount of each item and will be returned a price|Bread: 2 Pastry 1|Bread x2 = x$ Pastry x1 = x$|
+|User is prompted to purchace the amount selected and given a total|'Would you like to proceed? UI = yes|Your total is: x$ thank you.|
 
 ## Setup/Installation Requirements
 
 _In Terminal:_
 
-* Navigate to where you want this application to be saved, i.e.:
+<!-- * Navigate to where you want this application to be saved, i.e.:
 ```cd desktop```
 * Clone the file from GitHub with HTTPS
 ```git clone https://github.com/benjamin-thompdx/kitchen-quest.git```
