@@ -62,8 +62,7 @@ namespace Bakery.Models
       _pastryPrice = newPastryPrice;
     }
     // public class Pastry ends below
-    
   }
-
+  
 // namespace ends below
 }
