@@ -19,9 +19,9 @@ namespace Bakery.Models
     {
       return _breadName;
     }
-    public int GetBreadName()
+    public int GetBreadPrice()
     {
-      return _breadName;
+      return _breadPrice;
     }
     public void SetBreadname(string newBreadName)
     {
