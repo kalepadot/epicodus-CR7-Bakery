@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Bakery.Models
 {
-
+  
   public class Bread
   {
     private string _breadName;
@@ -30,7 +30,6 @@ namespace Bakery.Models
     {
       _breadPrice = newBreadPrice;
     }
-
 
       // public class Bread ends below
   }
@@ -63,6 +62,16 @@ namespace Bakery.Models
     }
     // public class Pastry ends below
   }
-  
+  public class ShoppingCart
+  {
+    public static List<string> cart = new List<string>();
+    public string Items{get; set;}
+
+    public ShoppingCart(string items)
+    {
+      Items = items;
+    }
+    // public class cart ends below
+  }
 // namespace ends below
 }
