@@ -17,10 +17,10 @@ User should be prompted with a welcome message from the bakery and given the pri
 
 | Behavior | Input | Output |
 |---|:---:|:---:|
-|User is welcomed to bakery by application|'welcome to the bakery'|
+|User is welcomed to bakery by application|dotnet run| 'Welcome to the Bakery'|
 |User is prompted with prices of bread and pastries|Bread = x$ Pastry = x$|
 |User can input amount of each item and will be returned a price|Bread: 2 Pastry 1|Bread x2 = x$ Pastry x1 = x$|
-|User is prompted to purchace the amount selected and given a total|'Would you like to proceed? UI = yes|Your total is: x$ thank you.|
+|User is prompted to purchace the amount selected and given a total|'Would you like to proceed?' UI = yes|Your total is: x$ thank you.|
 
 ## Setup/Installation Requirements
 
