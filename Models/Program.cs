@@ -17,15 +17,15 @@ public class Program
     List<Pastry> Pastrys = new List<Pastry>() {kingcake, sweetroll, haruspecial};
     Console.WriteLine("Welcome to Haru's Bakery");
     Console.WriteLine("Take a look at our menu");
-    foreach (Bread cart in Breads)
+    foreach (Bread selection in Breads)
     {
-      Console.WriteLine(cart.GetBreadName());
-      Console.WriteLine(cart.GetBreadPrice());
+      Console.WriteLine(selection.GetBreadName());
+      Console.WriteLine(selection.GetBreadPrice());
     }
-      foreach (Pastry cart in Pastrys)
+      foreach (Pastry selection in Pastrys)
       {
-        Console.WriteLine(cart.GetPastryName());
-        Console.WriteLine(cart.GetPastryPrice());
+        Console.WriteLine(selection.GetPastryName());
+        Console.WriteLine(selection.GetPastryPrice());
       }
 
       Console.WriteLine("Would you like to make a purchase? (yes/no)");
@@ -40,15 +40,15 @@ public class Program
         string meow = Console.ReadLine();
         if(meow == "meow")
         {
-          foreach (Bread cart in Breads)
+          foreach (Bread selection in Breads)
           {
-            Console.WriteLine(cart.GetBreadName());
-            Console.WriteLine(cart.GetBreadPrice());
+            Console.WriteLine(selection.GetBreadName());
+            Console.WriteLine(selection.GetBreadPrice());
           }
-          foreach (Pastry cart in Pastrys)
+          foreach (Pastry selection in Pastrys)
           {
-            Console.WriteLine(cart.GetPastryName());
-            Console.WriteLine(cart.GetPastryPrice());
+            Console.WriteLine(selection.GetPastryName());
+            Console.WriteLine(selection.GetPastryPrice());
           }
         }
       }
