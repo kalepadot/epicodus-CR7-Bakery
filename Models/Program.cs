@@ -9,13 +9,14 @@ public class Program
   {
     Bread baguette = new Bread("Fresh Baguette",5);
     List<Bread> Breads = new List<Bread>() {baguette};
+    Console.WriteLine("Welcome Message");
     foreach (Bread cart in Breads)
     {
+      Console.WriteLine(cart.GetBreadName());
       Console.WriteLine(cart.GetBreadPrice());
     }
-    Console.WriteLine("Welcome Message");
-    // Console.WriteLine(GetBreadPrice);
-    // int breadPrice = int.Parse(stringGetBreadPrice);
+    
+  
     
 
 
