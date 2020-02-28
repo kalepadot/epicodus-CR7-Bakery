@@ -9,9 +9,14 @@ public class Program
   {
     Bread baguette = new Bread("Fresh Baguette",5);
     List<Bread> Breads = new List<Bread>() {baguette};
-
+    foreach (Bread cart in Breads)
+    {
+      Console.WriteLine(cart.GetBreadPrice());
+    }
     Console.WriteLine("Welcome Message");
-    // Console.WriteLine(Bread);
+    // Console.WriteLine(GetBreadPrice);
+    // int breadPrice = int.Parse(stringGetBreadPrice);
+    
 
 
     // public static void MAIN ends below
