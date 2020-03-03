@@ -54,6 +54,7 @@ public class Program
           }
         }
       }
+      Console.WriteLine("testing");
       // Console.WriteLine("Its time to make your selection. Plesase ")
     
     
