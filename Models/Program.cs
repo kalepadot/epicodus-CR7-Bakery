@@ -54,7 +54,35 @@ public class Program
           }
         }
       }
-      Console.WriteLine("testing");
+      Console.WriteLine("Oh dear, looks like something has come up.");
+      Console.WriteLine("For now, I can sell you Bread or Pastry");
+      Console.WriteLine("So, Whats it going to be? (Bread/Pastry");
+      string orderBread = Console.ReadLine();
+      if(orderBread == "Bread")
+      {
+        Console.WriteLine("Okay! How many Breads would you like?");
+        string stringHowMany = Console.ReadLine();
+        int breadQuantity = int.Parse(stringHowMany);
+        int breadPrice = 0;
+        Bread newBread = new Bread(breadPrice, breadQuantity);
+        newBread.PurchaseBread(breadQuantity, breadPrice);
+    }
+      
+      // Console.WriteLine("Lets start with Bread. Please enter the bread type");
+      // string order = Console.ReadLine();
+      // if(order == "Fresh Baguette")
+      // {
+      //   Console.WriteLine("How many Fresh Baguettes would you like? Enter a number Please");
+      //   string quantity = Console.ReadLine();
+      //   if(quantity =="1")
+
+      // }
+      // if(order == "Sourdough Loaf")
+      // {
+      //   Console.WriteLine("How many Sourdoug Loafs would you like? Enter a number Please");
+      //   string quantity = Console.ReadLine();
+      //   if(quantity =="1")
+      // }
       // Console.WriteLine("Its time to make your selection. Plesase ")
     
     
