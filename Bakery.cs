@@ -120,9 +120,9 @@ namespace Bakery.Models
         case "2":
           AddItems();
           break;
-        // default:
-        //   Main();
-        //   break;
+        default:
+          Main();
+          break;
       }
       // public static void cart ends below
     } 
