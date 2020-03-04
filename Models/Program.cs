@@ -16,7 +16,7 @@ public class Program
     List<Bread> Breads = new List<Bread>() {baguette, sourdough, biscuit};
     List<Pastry> Pastrys = new List<Pastry>() {kingcake, sweetroll, haruspecial};
     string item = "";
-    ShoppingCart newShoppingCart = new ShoppingCart(item);
+    // ShoppingCart newShoppingCart = new ShoppingCart(item);
     Console.WriteLine("Welcome to Haru's Bakery");
     Console.WriteLine("Take a look at our menu");
     foreach (Bread selection in Breads)

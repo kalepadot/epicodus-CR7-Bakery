@@ -88,16 +88,62 @@ namespace Bakery.Models
     }
     // public class Pastry ends below
   }
+  public class Item
+  {
+
+   public string Description { get; set;}
+   private static List<Item> _instances = new List<Item> {};
+
+    public Item(string description)
+    {
+      Description = description;
+       _instances.Add(this);
+    }
+    public static List<Item> GetAll()
+    {
+      return _instances;
+    }
+  }
   public class ShoppingCart
   {
-    public static List<string> cart = new List<string>();
-    public string Items{get; set;}
-
-    public ShoppingCart(string items)
+    public static List<Item> newList = new List<Item> {};
+    
+    public static void Cart()
     {
-      Items = items;
+      Console.WriteLine("Welcome to your Shopping Cart! Would you like to \n[1] View Cart? Or \n[2] Buy more treats?");
+      string cartResponse = Console.ReadLine();
+      switch(cartResponse)
+      {
+        case "1":
+          ViewList();
+          break;
+        case "2":
+          AddItems();
+          break;
+        // default:
+        //   Main();
+        //   break;
+      }
+      // public static void cart ends below
+    } 
+      public static void ViewList()
+    {
+      for (int i = 0; i < newList.Count; i++)
+      {
+        Console.WriteLine((i+1) + ". " + newList[i].Description);
+      }
+      Cart();
     }
-    // public class cart ends below
+    public static void AddItems()
+    {
+      Console.WriteLine("Please enter the items you would like to add to your cart!");
+      string description = Console.ReadLine();
+      Item newItem = new Item(description);
+      newList.Add(newItem);
+      Cart();
+    }
+    // public class Shoppingcart ends below
   }
+ 
 // namespace ends below
 }
