@@ -9,6 +9,7 @@ namespace Bakery.Models
     private string _breadName;
     private int _breadPrice;
     private int _breadQuantity;
+    
     public Bread(string breadName, int breadPrice, int breadQuantity)
     {
       _breadName = breadName;
@@ -35,7 +36,7 @@ namespace Bakery.Models
     {
       _breadPrice = newBreadPrice;
     }
-    public int SetBreadQuantitiy(int newBreadQuantity)
+    public void SetBreadQuantitiy(int newBreadQuantity)
     {
       _breadQuantity = newBreadQuantity;
     }

@@ -7,9 +7,9 @@ public class Program
 {
   public static void Main()
   {
-    Bread baguette = new Bread("Fresh Baguette",5);
-    Bread sourdough = new Bread ("Sourdough Loaf",5);
-    Bread biscuit = new Bread ("Tender Paw Biscuits",5);
+    Bread baguette = new Bread("Fresh Baguette",5,0);
+    Bread sourdough = new Bread ("Sourdough Loaf",5,0);
+    Bread biscuit = new Bread ("Tender Paw Biscuits",5,0);
     Pastry kingcake = new Pastry ("Catnip King Cake",2);
     Pastry sweetroll = new Pastry ("Sweet Roll",2);
     Pastry haruspecial = new Pastry ("Haru Special",2);
@@ -54,19 +54,23 @@ public class Program
           }
         }
       }
-      Console.WriteLine("Oh dear, looks like something has come up.");
-      Console.WriteLine("For now, I can sell you Bread or Pastry");
-      Console.WriteLine("So, Whats it going to be? (Bread/Pastry");
-      string orderBread = Console.ReadLine();
-      if(orderBread == "Bread")
-      {
-        Console.WriteLine("Okay! How many Breads would you like?");
-        string stringHowMany = Console.ReadLine();
-        int breadQuantity = int.Parse(stringHowMany);
-        int breadPrice = 0;
-        Bread newBread = new Bread(breadPrice, breadQuantity);
-        newBread.PurchaseBread(breadQuantity, breadPrice);
-    }
+      // Console.WriteLine("Oh dear, looks like something has come up.");
+      // Console.WriteLine("For now, I can sell you Bread or Pastry");
+      // Console.WriteLine("So, Whats it going to be? (Bread/Pastry");
+      // string orderBread = Console.ReadLine();
+      // if(orderBread == "Bread")
+      // {
+      //   Console.WriteLine("Okay! How many Breads would you like?");
+      //   string stringHowMany = Console.ReadLine();
+      //   int breadQuantity = int.Parse(stringHowMany);
+      //   int breadPrice = 0;
+      //   Bread newBread = new Bread(breadPrice, breadQuantity);
+      //   newBread.PurchaseBread(breadQuantity, breadPrice);
+      // }
+      // else 
+      // {
+      //   Console.WriteLine("goodbye!");
+      // }
       
       // Console.WriteLine("Lets start with Bread. Please enter the bread type");
       // string order = Console.ReadLine();
