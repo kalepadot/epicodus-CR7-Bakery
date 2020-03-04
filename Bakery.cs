@@ -1,149 +1,106 @@
 using System;
 using System.Collections.Generic;
 
-namespace Bakery.Models
+using Bakery.Models;
+
+public class Program
 {
-  
-  public class Bread
+  public static void Main()
   {
-    private string _breadName;
-    private int _breadPrice;
-    private int _breadQuantity;
-    
-    public Bread(string breadName, int breadPrice, int breadQuantity)
+    Bread baguette = new Bread("Fresh Baguette",5,0);
+    Bread sourdough = new Bread ("Sourdough Loaf",5,0);
+    Bread biscuit = new Bread ("Tender Paw Biscuits",5,0);
+    Pastry kingcake = new Pastry ("Catnip King Cake",2);
+    Pastry sweetroll = new Pastry ("Sweet Roll",2);
+    Pastry haruspecial = new Pastry ("Haru Special",2);
+    List<Bread> Breads = new List<Bread>() {baguette, sourdough, biscuit};
+    List<Pastry> Pastrys = new List<Pastry>() {kingcake, sweetroll, haruspecial};
+    // string item = "";
+    // ShoppingCart newShoppingCart = new ShoppingCart(item);
+    Console.WriteLine("Welcome to Haru's Bakery");
+    Console.WriteLine("Take a look at our menu");
+    foreach (Bread selection in Breads)
     {
-      _breadName = breadName;
-      _breadPrice = breadPrice;
-      _breadQuantity = breadQuantity;
+      Console.WriteLine(selection.GetBreadName());
+      Console.WriteLine(selection.GetBreadPrice());
     }
-    public string GetBreadName()
+    foreach (Pastry selection in Pastrys)
     {
-      return _breadName;
+      Console.WriteLine(selection.GetPastryName());
+      Console.WriteLine(selection.GetPastryPrice());
     }
-    public int GetBreadPrice()
+
+    Console.WriteLine("Would you like to make a purchase? (yes/no)");
+    string start = Console.ReadLine();
+    if(start == "yes")
     {
-      return _breadPrice;
-    }
-    public int GetBreadQuantity()
-    {
-      return _breadQuantity;
-    }
-    public void SetBreadname(string newBreadName)
-    {
-      _breadName = newBreadName;
-    }
-    public void SetBreadPrice(int newBreadPrice)
-    {
-      _breadPrice = newBreadPrice;
-    }
-    public void SetBreadQuantitiy(int newBreadQuantity)
-    {
-      _breadQuantity = newBreadQuantity;
-    }
-    public void PurchaseBread(int breadPrice, int breadQuantity)
-    {
-      if (breadQuantity == 1)
+      Console.WriteLine("Wonderful! We have a couple of specials today:");
+      Console.WriteLine("Buy two Breads get one free!");
+      Console.WriteLine("Buy one Pastry for $2, or you can get three for $5!");
+      Console.WriteLine("Just say 'meow' and I'll show you the menu again");
+      Console.WriteLine("From there, you can select your items");
+      string meow = Console.ReadLine();
+      if(meow == "meow")
       {
-        breadPrice += 5;
-      }
-      else
-      {
-        for(int i = 0; i < breadQuantity; i++)
+        foreach (Bread selection in Breads)
         {
-          if (i % 3 == 0)
-          {
-          breadPrice += 10;
-          }
+          Console.WriteLine(selection.GetBreadName());
+          Console.WriteLine(selection.GetBreadPrice());
+        }
+        foreach (Pastry selection in Pastrys)
+        {
+          Console.WriteLine(selection.GetPastryName());
+          Console.WriteLine(selection.GetPastryPrice());
         }
       }
     }
-      // public class Bread ends below
-  }
-
-  public class Pastry
-  {
-    private string _pastryName;
-    private int _pastryPrice;
-
-    public Pastry(string pastryName, int pastryPrice)
+    Console.WriteLine("Okay! Remember, when making your order please speak clearly. Lets go to your cart!");
     {
-      _pastryName = pastryName;
-      _pastryPrice = pastryPrice;
+        ShoppingCart.Cart();
     }
-    public string GetPastryName()
-    {
-      return _pastryName;
-    }
-    public int GetPastryPrice()
-    {
-      return _pastryPrice;
-    }
-    public void SetPastryName(string newPastryName)
-    {
-      _pastryName = newPastryName;
-    }
-    public void SetPastryPrice(int newPastryPrice)
-    {
-      _pastryPrice = newPastryPrice;
-    }
-    // public class Pastry ends below
-  }
-  public class Item
-  {
-
-   public string Description { get; set;}
-   private static List<Item> _instances = new List<Item> {};
-
-    public Item(string description)
-    {
-      Description = description;
-       _instances.Add(this);
-    }
-    public static List<Item> GetAll()
-    {
-      return _instances;
-    }
-  }
-  public class ShoppingCart
-  {
-    public static List<Item> newList = new List<Item> {};
     
-    public static void Cart()
-    {
-      Console.WriteLine("Welcome to your Shopping Cart! Would you like to \n[1] View Cart? Or \n[2] Buy more treats?");
-      string cartResponse = Console.ReadLine();
-      switch(cartResponse)
-      {
-        case "1":
-          ViewList();
-          break;
-        case "2":
-          AddItems();
-          break;
-        default:
-          Main();
-          break;
-      }
-      // public static void cart ends below
-    } 
-      public static void ViewList()
-    {
-      for (int i = 0; i < newList.Count; i++)
-      {
-        Console.WriteLine((i+1) + ". " + newList[i].Description);
-      }
-      Cart();
-    }
-    public static void AddItems()
-    {
-      Console.WriteLine("Please enter the items you would like to add to your cart!");
-      string description = Console.ReadLine();
-      Item newItem = new Item(description);
-      newList.Add(newItem);
-      Cart();
-    }
-    // public class Shoppingcart ends below
+      
+      // Console.WriteLine("Oh dear, looks like something has come up.");
+      // Console.WriteLine("For now, I can sell you Bread or Pastry");
+      // Console.WriteLine("So, Whats it going to be? (Bread/Pastry");
+      // string orderBread = Console.ReadLine();
+      // if(orderBread == "Bread")
+      // {
+      //   Console.WriteLine("Okay! How many Breads would you like?");
+      //   string stringHowMany = Console.ReadLine();
+      //   int breadQuantity = int.Parse(stringHowMany);
+      //   int breadPrice = 0;
+      //   Bread newBread = new Bread(breadPrice, breadQuantity);
+      //   newBread.PurchaseBread(breadQuantity, breadPrice);
+      // }
+      // else 
+      // {
+      //   Console.WriteLine("goodbye!");
+      // }
+      
+      // Console.WriteLine("Lets start with Bread. Please enter the bread type");
+      // string order = Console.ReadLine();
+      // if(order == "Fresh Baguette")
+      // {
+      //   Console.WriteLine("How many Fresh Baguettes would you like? Enter a number Please");
+      //   string quantity = Console.ReadLine();
+      //   if(quantity =="1")
+
+      // }
+      // if(order == "Sourdough Loaf")
+      // {
+      //   Console.WriteLine("How many Sourdoug Loafs would you like? Enter a number Please");
+      //   string quantity = Console.ReadLine();
+      //   if(quantity =="1")
+      // }
+      // Console.WriteLine("Its time to make your selection. Plesase ")
+    
+    
+  
+    
+
+
+    // public static void MAIN ends below
   }
- 
-// namespace ends below
+  // puclic class program ends below
 }
