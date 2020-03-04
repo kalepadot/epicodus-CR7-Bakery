@@ -15,7 +15,7 @@ public class Program
     Pastry haruspecial = new Pastry ("Haru Special",2);
     List<Bread> Breads = new List<Bread>() {baguette, sourdough, biscuit};
     List<Pastry> Pastrys = new List<Pastry>() {kingcake, sweetroll, haruspecial};
-    string item = "";
+    // string item = "";
     // ShoppingCart newShoppingCart = new ShoppingCart(item);
     Console.WriteLine("Welcome to Haru's Bakery");
     Console.WriteLine("Take a look at our menu");
@@ -54,6 +54,12 @@ public class Program
           }
         }
       }
+      Console.WriteLine("Okay! Remember, when making your order please speak clearly. Lets go to your cart!");
+      {
+         Cart();
+      }
+     
+      
       // Console.WriteLine("Oh dear, looks like something has come up.");
       // Console.WriteLine("For now, I can sell you Bread or Pastry");
       // Console.WriteLine("So, Whats it going to be? (Bread/Pastry");
