@@ -20,9 +20,6 @@ using System.Collections.Generic;
         case "2":
           AddItems();
           break;
-        // default:
-        //   Bakery.Main();
-        //   break;
       }
       // public static void cart ends below
     } 
