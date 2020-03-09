@@ -10,8 +10,7 @@ A console application that will sell the user bread and pastrys. User will be ab
  ###  MVP:
 User should be prompted with a welcome message from the bakery and given the price for both bread and pastery. The use should then be able to specify how many loaves of bread and how many pasterys they would like to buy. The application will return the cost to the user. 
 
-## Preview
-![Landing Page Preview]()
+
 
 ## Project Specifications
 
