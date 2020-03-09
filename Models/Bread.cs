@@ -5,63 +5,39 @@ namespace Bakery.Models
 {
   public class Bread
   {
-    private string _breadName;
-    private int _breadPrice;
-    private int _breadQuantity;
+    public string BreadName { get; set; }
+    public int BreadPrice { get; set; }
+    public int BreadQuantity { get; set; }
     
     public Bread(string breadName, int breadPrice, int breadQuantity)
     {
-      _breadName = breadName;
-      _breadPrice = breadPrice;
-      _breadQuantity = breadQuantity;
+      BreadName = breadName;
+      BreadPrice = 5;
+      BreadQuantity = breadQuantity;
     }
 
-    public string GetBreadName()
+    public static void OrderBread()
     {
-      return _breadName;
-    }
-
-    public int GetBreadPrice()
-    {
-      return _breadPrice;
-    }
-
-    public int GetBreadQuantity()
-    {
-      return _breadQuantity;
-    }
-
-    public void SetBreadname(string newBreadName)
-    {
-      _breadName = newBreadName;
-    }
-
-    public void SetBreadPrice(int newBreadPrice)
-    {
-      _breadPrice = newBreadPrice;
-    }
-
-    public void SetBreadQuantitiy(int newBreadQuantity)
-    {
-      _breadQuantity = newBreadQuantity;
-    }
-
-    public void PurchaseBread(int breadPrice, int breadQuantity)
-    {
-      if (breadQuantity == 1)
+      for(int i = 1; i < breadQuantity; i++)
       {
-        breadPrice += 5;
-      }
-      else
-      {
-        for(int i = 0; i < breadQuantity; i++)
+        if(breadQuantity % 3 == 0)
         {
-          if (i % 3 == 0)
-          {
-          breadPrice += 10;
-          }
+          breadPrice += 0;
+        }
+        else
+        {
+          breadPrice += 5;
         }
       }
+        BreadReciept();
+    }
+  
+
+    public static void BreadReciept()
+    {
+      Console.WriteLine("Your order comes out to $" + biscuit.BreadPrice);
+      Console.WriteLine("Thank you for stopping in!");
     }
   }
 }
+ 
