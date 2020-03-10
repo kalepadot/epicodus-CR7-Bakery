@@ -31,13 +31,13 @@ public class Program
     {
       Console.WriteLine("Thats great! How many would you like to order?");
       biscuit.BreadQuantity = int.Parse(Console.ReadLine());
-      Bread.OrderBread();
+      biscuit.OrderBread();
     }
     else if(start == "sweetroll")
     {
       Console.WriteLine("Alright! How many would you like to order?");
       sweetroll.PastryQuantity = int.Parse(Console.ReadLine());
-      Pastry.OrderPastry();
+      sweetroll.OrderPastry();
     }
   }
 }

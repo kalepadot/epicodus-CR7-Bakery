@@ -6,38 +6,25 @@ namespace Bakery.Models
   public class Bread
   {
     public string BreadName { get; set; }
-    public int BreadPrice { get; set; }
-    public int BreadQuantity { get; set; }
+    public int BreadPrice { get; set; } = 5;
+    public int BreadQuantity { get; set; } =0;
+    public int Total { get; set; } = 0;
     
     public Bread(string breadName, int breadPrice, int breadQuantity)
     {
       BreadName = breadName;
-      BreadPrice = 5;
-      BreadQuantity = breadQuantity;
     }
 
-    public static void OrderBread()
+    public void OrderBread()
     {
-      for(int i = 1; i < breadQuantity; i++)
-      {
-        if(breadQuantity % 3 == 0)
-        {
-          breadPrice += 0;
-        }
-        else
-        {
-          breadPrice += 5;
-        }
-      }
-        BreadReciept();
+      Total =  (BreadQuantity - (BreadQuantity / 3))  * 5;
+      BreadReciept();
     }
   
-
-    public static void BreadReciept()
+    public void BreadReciept()
     {
-      Console.WriteLine("Your order comes out to $" + biscuit.BreadPrice);
+      Console.WriteLine("Your order comes out to $" + Total);
       Console.WriteLine("Thank you for stopping in!");
     }
   }
 }
- 

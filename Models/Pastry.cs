@@ -6,32 +6,26 @@ namespace Bakery.Models
   public class Pastry
   {
     public string PastryName { get; set; }
-    public int PastryPrice { get; set; }
-    public int PastryQuantity { get; set; }
+    public int PastryPrice { get; set; } = 2;
+    public int PastryQuantity { get; set; } = 0;
+    public int Total { get; set; } = 0;
 
     public Pastry(string pastryName, int pastryPrice, int pastryQuantity)
     {
       PastryName = pastryName;
-      PastryPrice = 2;
-      PastryQuantity = pastryQuantity;
-
     }
 
-    public static void OrderPastry()
+    public void OrderPastry()
     {
-      for(int i = 1; i < pastryQuantity; i++)
-      if(pastryQuantity % 3 == 0)
-      {
-        // need bread working
-        pastryPrice;
-      }
-      PastryReciept()
+      Total = PastryQuantity * 2 -1 * (PastryQuantity / 3);
+      PastryReciept();
     }
     
-    public static void PastryReciept()
+    public void PastryReciept()
     {
-      Console.WriteLine("Your order comes out to $" + sweetroll.PastryPrice);
+      Console.WriteLine("Your order comes out to $" + Total);
       Console.WriteLine("Than you for stopping in!");
     }
   }
 }
+    
